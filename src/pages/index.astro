@@ -1,4 +1,5 @@
 ---
+import { NavBar } from "../componenets/NavBar";
 import { UserForm } from "../componenets/UserForm";
 import { UserTable } from "../componenets/UserTable";
 ---
@@ -11,12 +12,15 @@ import { UserTable } from "../componenets/UserTable";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body class="flex antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
-		<div class="flex-1">
-			<UserForm client:visible />
-		</div>
-		<div class="flex-1">
-			<UserTable client:visible />
+	<body>
+		<NavBar />
+		<div class="flex antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
+			<div class="flex-1">
+				<UserForm client:visible />
+			</div>
+			<div class="flex-1">
+				<UserTable client:visible />
+			</div>
 		</div>
 	</body>
 </html>
